@@ -1,5 +1,5 @@
 export class Product {
-  id: number;
+  private id: number;
   name: string;
   price: number;
   quantity: number;
@@ -15,8 +15,12 @@ export class Product {
     return `Product: ${this.name} Price: $${this.price} Quantity: ${this.quantity}`;
   }
 
-  getStockValue(): string {
-    return `Stock Value: $${this.price * this.quantity}`;
+  // getStockValue(): string {
+  //   return `Stock Value: $${this.price * this.quantity}`;
+  // }
+
+  getStockValue() {
+    return this.price * this.quantity;
   }
 
   sell(unit: number): string {
