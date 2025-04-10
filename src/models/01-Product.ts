@@ -15,10 +15,6 @@ export class Product {
     return `Product: ${this.name} Price: $${this.price} Quantity: ${this.quantity}`;
   }
 
-  // getStockValue(): string {
-  //   return `Stock Value: $${this.price * this.quantity}`;
-  // }
-
   getStockValue() {
     return this.price * this.quantity;
   }
